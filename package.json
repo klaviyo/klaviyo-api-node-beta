@@ -1,6 +1,6 @@
 {
   "name": "klaviyo-sdk-beta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The_Klaviyo_REST_API__Please_visit_httpsdevelopers_klaviyo_com_for_more_details_",
   "license": "MIT",
   "type": "module",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klaviyo/klaviyo-node-sdk"
+    "url": "git+https://github.com/klaviyo/klaviyo-sdk-beta"
   },
   "dependencies": {
     "@babel/cli": "^7.16.8",

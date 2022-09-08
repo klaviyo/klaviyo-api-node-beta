@@ -25,14 +25,12 @@ var MetricAggregateQueryAsSubResource = /*#__PURE__*/function () {
    * Constructs a new <code>MetricAggregateQueryAsSubResource</code>.
    * @alias module:model/MetricAggregateQueryAsSubResource
    * @class
-   * @param id {String} 
    * @param type {module:model/MetricAggregateQueryAsSubResource.TypeEnum} 
    * @param attributes {module:model/MetricAggregateQueryAsSubResourceAttributes} 
    */
-  function MetricAggregateQueryAsSubResource(id, type, attributes) {
+  function MetricAggregateQueryAsSubResource(type, attributes) {
     _classCallCheck(this, MetricAggregateQueryAsSubResource);
 
-    this.id = id;
     this.type = type;
     this.attributes = attributes;
   }
@@ -50,7 +48,6 @@ var MetricAggregateQueryAsSubResource = /*#__PURE__*/function () {
     value: function constructFromObject(data, obj) {
       if (data) {
         obj = obj || new MetricAggregateQueryAsSubResource();
-        if (data.hasOwnProperty('id')) obj.id = _ApiClient.ApiClient.convertToType(data['id'], 'String');
         if (data.hasOwnProperty('type')) obj.type = _ApiClient.ApiClient.convertToType(data['type'], 'String');
         if (data.hasOwnProperty('attributes')) obj.attributes = _MetricAggregateQueryAsSubResourceAttributes.MetricAggregateQueryAsSubResourceAttributes.constructFromObject(data['attributes']);
       }
@@ -62,18 +59,13 @@ var MetricAggregateQueryAsSubResource = /*#__PURE__*/function () {
   return MetricAggregateQueryAsSubResource;
 }();
 /**
- * @member {String} id
- */
-
-
-exports.MetricAggregateQueryAsSubResource = MetricAggregateQueryAsSubResource;
-MetricAggregateQueryAsSubResource.prototype.id = undefined;
-/**
  * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
 
+
+exports.MetricAggregateQueryAsSubResource = MetricAggregateQueryAsSubResource;
 MetricAggregateQueryAsSubResource.TypeEnum = {
   /**
    * value: "metric-aggregate"
