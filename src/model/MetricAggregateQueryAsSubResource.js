@@ -26,12 +26,10 @@ export class MetricAggregateQueryAsSubResource {
    * Constructs a new <code>MetricAggregateQueryAsSubResource</code>.
    * @alias module:model/MetricAggregateQueryAsSubResource
    * @class
-   * @param id {String} 
    * @param type {module:model/MetricAggregateQueryAsSubResource.TypeEnum} 
    * @param attributes {module:model/MetricAggregateQueryAsSubResourceAttributes} 
    */
-  constructor(id, type, attributes) {
-    this.id = id;
+  constructor(type, attributes) {
     this.type = type;
     this.attributes = attributes;
   }
@@ -46,8 +44,6 @@ export class MetricAggregateQueryAsSubResource {
   static constructFromObject(data, obj) {
     if (data) {
       obj = obj || new MetricAggregateQueryAsSubResource();
-      if (data.hasOwnProperty('id'))
-        obj.id = ApiClient.convertToType(data['id'], 'String');
       if (data.hasOwnProperty('type'))
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('attributes'))
@@ -56,11 +52,6 @@ export class MetricAggregateQueryAsSubResource {
     return obj;
   }
 }
-
-/**
- * @member {String} id
- */
-MetricAggregateQueryAsSubResource.prototype.id = undefined;
 
 /**
  * Allowed values for the <code>type</code> property.

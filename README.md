@@ -2,7 +2,7 @@
 
 ***Note: If you would like to request beta access to the new APIs, please [fill out this brief form](https://manage.kmail-lists.com/subscriptions/subscribe?a=9BX3wh&g=VSyTC6) and you will be contacted by Klaviyo's product team once the beta release is available.***
 
-- SDK version: 1.0.0
+- SDK version: 1.0.1
 
 - Revision: 2022-09-07.pre
 
