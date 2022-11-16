@@ -1,6 +1,6 @@
 # Klaviyo JavaScript Beta SDK
 
-- SDK version: 1.0.1
+- SDK version: 1.0.2
 
 - Revision: 2022-11-14.pre
 

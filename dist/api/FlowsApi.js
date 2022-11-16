@@ -79,7 +79,7 @@ function FlowsApi(apiClient) {
  * Return all tags that belong to the given flow.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Flows Read&#x60; &#x60;Tags Read&#x60;
  * @param {<&vendorExtensions.x-jsdoc-type>} flowId 
  * @param {Object} opts Optional parameters
- * @param {Array.<module:model/String>} opts.fieldsTag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+ * @param {Array.<module:model/String>} opts.fieldsTag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
  * @return {Promise} a {@link https://www.promisejs.org/|Promise}
  */);
 exports.FlowsApi = FlowsApi;

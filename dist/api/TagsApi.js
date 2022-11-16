@@ -418,10 +418,10 @@ function TagsApi(apiClient) {
               postBody = null;
               pathParams = {};
               queryParams = {
-                'fields[tag-group]': _this.apiClient.buildCollectionParam(opts['fieldsTagGroup'], 'csv'),
                 'filter': opts['filter'],
                 'page[cursor]': opts['pageCursor'],
-                'sort': opts['sort']
+                'sort': opts['sort'],
+                'fields[tag-group]': _this.apiClient.buildCollectionParam(opts['fieldsTagGroup'], 'csv')
               };
               headerParams = {};
               formParams = {};
@@ -499,10 +499,10 @@ function TagsApi(apiClient) {
               postBody = null;
               pathParams = {};
               queryParams = {
-                'fields[tag]': _this.apiClient.buildCollectionParam(opts['fieldsTag'], 'csv'),
                 'filter': opts['filter'],
                 'page[cursor]': opts['pageCursor'],
-                'sort': opts['sort']
+                'sort': opts['sort'],
+                'fields[tag]': _this.apiClient.buildCollectionParam(opts['fieldsTag'], 'csv')
               };
               headerParams = {};
               formParams = {};

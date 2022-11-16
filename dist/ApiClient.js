@@ -52,7 +52,7 @@ var ApiClient = /*#__PURE__*/function () {
      */
     this.defaultHeaders = {
       revision: "2022-11-14.pre",
-      "User-Agent": "Node-klaviyo-api-beta/1.0.1"
+      "User-Agent": "Node-klaviyo-api-beta/1.0.2"
     };
 
     /**

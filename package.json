@@ -1,6 +1,6 @@
 {
   "name": "klaviyo-api-beta",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node Klaviyo api wrapper for beta endpoints",
   "license": "MIT",
   "type": "module",

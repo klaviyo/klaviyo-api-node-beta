@@ -312,7 +312,7 @@ export class TagsApi {
      * Retrieve the tag with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
      * @param {<&vendorExtensions.x-jsdoc-type>} id 
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/String>} opts.fieldsTag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+     * @param {Array.<module:model/String>} opts.fieldsTag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     getTag = async (id, opts) => {
@@ -356,7 +356,7 @@ export class TagsApi {
      * Retrieve the tag group with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
      * @param {<&vendorExtensions.x-jsdoc-type>} id 
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/String>} opts.fieldsTagGroup For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
+     * @param {Array.<module:model/String>} opts.fieldsTagGroup For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     getTagGroup = async (id, opts) => {
@@ -446,10 +446,10 @@ export class TagsApi {
      * Get Tag Groups
      * List all tag groups in an account. Every account has one default tag group. Tag groups can be filtered by &#x60;name&#x60;, &#x60;exclusive&#x60;, and &#x60;default&#x60;, and sorted by &#x60;name&#x60; or &#x60;id&#x60; in ascending or descending order. Returns a maximum of 25 tag groups per request, which can be paginated with [cursor-based pagination](https://developers.klaviyo.com/en/v2022-10-17/reference/api_overview#pagination).&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/String>} opts.fieldsTagGroup For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
      * @param {String} opts.filter For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;&#x60;name&#x60;: &#x60;contains&#x60;, &#x60;ends-with&#x60;, &#x60;equals&#x60;, &#x60;starts-with&#x60;&lt;br&gt;&#x60;exclusive&#x60;: &#x60;equals&#x60;&lt;br&gt;&#x60;default&#x60;: &#x60;equals&#x60;
      * @param {String} opts.pageCursor For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#pagination
      * @param {module:model/String} opts.sort For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sorting
+     * @param {Array.<module:model/String>} opts.fieldsTagGroup For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     getTagGroups = async (opts) => {
@@ -461,7 +461,7 @@ export class TagsApi {
         
       };
       let queryParams = {
-        'fields[tag-group]': this.apiClient.buildCollectionParam(opts['fieldsTagGroup'], 'csv'),'filter': opts['filter'],'page[cursor]': opts['pageCursor'],'sort': opts['sort']
+        'filter': opts['filter'],'page[cursor]': opts['pageCursor'],'sort': opts['sort'],'fields[tag-group]': this.apiClient.buildCollectionParam(opts['fieldsTagGroup'], 'csv')
       };
       let headerParams = {
         
@@ -535,10 +535,10 @@ export class TagsApi {
      * Get Tags
      * List all tags in an account. Tags can be filtered by &#x60;name&#x60;, and sorted by &#x60;name&#x60; or &#x60;id&#x60; in ascending or descending order. Returns a maximum of 50 tags per request, which can be paginated with [cursor-based pagination](https://developers.klaviyo.com/en/v2022-10-17/reference/api_overview#pagination).&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: &#x60;3/s&#x60;&lt;br&gt;Steady: &#x60;60/m&#x60;  **Scopes:** &#x60;Tags Read&#x60;
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/String>} opts.fieldsTag For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sparse-fieldsets
      * @param {String} opts.filter For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;&#x60;name&#x60;: &#x60;contains&#x60;, &#x60;ends-with&#x60;, &#x60;equals&#x60;, &#x60;starts-with&#x60;
      * @param {String} opts.pageCursor For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#pagination
      * @param {module:model/String} opts.sort For more information please visit https://developers.klaviyo.com/en/v/reference/api-overview#sorting
+     * @param {Array.<module:model/String>} opts.fieldsTag For more information please visit https://developers.klaviyo.com/en/v2022-11-14.pre/reference/api-overview#sparse-fieldsets
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     getTags = async (opts) => {
@@ -550,7 +550,7 @@ export class TagsApi {
         
       };
       let queryParams = {
-        'fields[tag]': this.apiClient.buildCollectionParam(opts['fieldsTag'], 'csv'),'filter': opts['filter'],'page[cursor]': opts['pageCursor'],'sort': opts['sort']
+        'filter': opts['filter'],'page[cursor]': opts['pageCursor'],'sort': opts['sort'],'fields[tag]': this.apiClient.buildCollectionParam(opts['fieldsTag'], 'csv')
       };
       let headerParams = {
         
