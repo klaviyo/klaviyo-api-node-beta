@@ -1,5 +1,6 @@
 import { backOff } from "exponential-backoff";
 
+import {CampaignsApi} from './api/CampaignsApi.js';
 import {DataPrivacyApi} from './api/DataPrivacyApi.js';
 import {FlowsApi} from './api/FlowsApi.js';
 import {ListsApi} from './api/ListsApi.js';
@@ -72,6 +73,7 @@ const ConfigWrapper = (authKey, opts = {}) => {
     return defaultClient
 }
 
+const Campaigns = wrapObj(CampaignsApi)
 const DataPrivacy = wrapObj(DataPrivacyApi)
 const Flows = wrapObj(FlowsApi)
 const Lists = wrapObj(ListsApi)
@@ -79,6 +81,7 @@ const Segments = wrapObj(SegmentsApi)
 const Tags = wrapObj(TagsApi)
 
 export {
+    Campaigns,
     DataPrivacy,
     Flows,
     Lists,

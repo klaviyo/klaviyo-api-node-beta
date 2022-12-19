@@ -1,8 +1,8 @@
 # Klaviyo JavaScript Beta SDK
 
-- SDK version: 1.0.2
+- SDK version: 2.0.0
 
-- Revision: 2022-11-14.pre
+- Revision: 2022-12-15.pre
 
 ## Helpful Resources
 
@@ -20,6 +20,7 @@ This SDK exactly mirrors the organization and naming convention of the above lan
 
 This SDK is organized into the following resources:
 
+ - Campaigns
  - DataPrivacy
  - Flows
  - Lists
@@ -185,13 +186,141 @@ _**NOTE:**_
 
 
 
+## CampaignsApi
+
+
+#### [Assign Campaign Message Template](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/assign_campaign_message_template)
+
+```JavaScript
+const Campaigns.assignCampaignMessageTemplate(body)
+```
+
+
+
+
+#### [Create Campaign](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign)
+
+```JavaScript
+const Campaigns.createCampaign(body)
+```
+
+
+
+
+#### [Create Campaign Clone](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign_clone)
+
+```JavaScript
+const Campaigns.createCampaignClone(body)
+```
+
+
+
+
+#### [Create Campaign Send Job](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_campaign_send_job)
+
+```JavaScript
+const Campaigns.createCampaignSendJob(body)
+```
+
+
+
+
+#### [Delete Campaign](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/delete_campaign)
+
+```JavaScript
+const Campaigns.deleteCampaign(id)
+```
+
+
+
+
+#### [Get Campaign](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaign)
+
+```JavaScript
+const Campaigns.getCampaign(id, opts)
+```
+
+
+
+
+#### [Get Campaign Message](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaign_message)
+
+```JavaScript
+const Campaigns.getCampaignMessage(id, opts)
+```
+
+
+
+
+#### [Get Campaign Relationships](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaign_relationships)
+
+```JavaScript
+const Campaigns.getCampaignRelationships(id, relatedResource)
+```
+
+
+
+
+#### [Get Campaign Send Job](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaign_send_job)
+
+```JavaScript
+const Campaigns.getCampaignSendJob(id, opts)
+```
+
+
+
+
+#### [Get Campaign Tags](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaign_tags)
+
+```JavaScript
+const Campaigns.getCampaignTags(campaignId, opts)
+```
+
+
+
+
+#### [Get Campaigns](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_campaigns)
+
+```JavaScript
+const Campaigns.getCampaigns(opts)
+```
+
+
+
+
+#### [Update Campaign](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/update_campaign)
+
+```JavaScript
+const Campaigns.updateCampaign(body, id)
+```
+
+
+
+
+#### [Update Campaign Message](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/update_campaign_message)
+
+```JavaScript
+const Campaigns.updateCampaignMessage(body, id)
+```
+
+
+
+
+#### [Update Campaign Send Job](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/update_campaign_send_job)
+
+```JavaScript
+const Campaigns.updateCampaignSendJob(body, id)
+```
+
+
+
 ## DataPrivacyApi
 
 
-#### [Create Data Privacy Deletion Job](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/create_data_privacy_deletion_job)
+#### [Request Profile Deletion](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/request_profile_deletion)
 
 ```JavaScript
-const DataPrivacy.createDataPrivacyDeletionJob(body)
+const DataPrivacy.requestProfileDeletion(body)
 ```
 
 
@@ -199,7 +328,7 @@ const DataPrivacy.createDataPrivacyDeletionJob(body)
 ## FlowsApi
 
 
-#### [Get Flow Tags](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_flow_tags)
+#### [Get Flow Tags](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_flow_tags)
 
 ```JavaScript
 const Flows.getFlowTags(flowId, opts)
@@ -210,7 +339,7 @@ const Flows.getFlowTags(flowId, opts)
 ## ListsApi
 
 
-#### [Get List Tags](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_list_tags)
+#### [Get List Tags](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_list_tags)
 
 ```JavaScript
 const Lists.getListTags(listId, opts)
@@ -221,7 +350,7 @@ const Lists.getListTags(listId, opts)
 ## SegmentsApi
 
 
-#### [Get Segment Tags](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_segment_tags)
+#### [Get Segment Tags](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_segment_tags)
 
 ```JavaScript
 const Segments.getSegmentTags(segmentId, opts)
@@ -232,7 +361,7 @@ const Segments.getSegmentTags(segmentId, opts)
 ## TagsApi
 
 
-#### [Create Tag](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/create_tag)
+#### [Create Tag](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_tag)
 
 ```JavaScript
 const Tags.createTag(body)
@@ -241,7 +370,7 @@ const Tags.createTag(body)
 
 
 
-#### [Create Tag Group](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/create_tag_group)
+#### [Create Tag Group](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_tag_group)
 
 ```JavaScript
 const Tags.createTagGroup(body)
@@ -250,7 +379,7 @@ const Tags.createTagGroup(body)
 
 
 
-#### [Create Tag Relationships](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/create_tag_relationships)
+#### [Create Tag Relationships](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/create_tag_relationships)
 
 ```JavaScript
 const Tags.createTagRelationships(body, id, relatedResource)
@@ -259,7 +388,7 @@ const Tags.createTagRelationships(body, id, relatedResource)
 
 
 
-#### [Delete Tag](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/delete_tag)
+#### [Delete Tag](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/delete_tag)
 
 ```JavaScript
 const Tags.deleteTag(id)
@@ -268,7 +397,7 @@ const Tags.deleteTag(id)
 
 
 
-#### [Delete Tag Group](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/delete_tag_group)
+#### [Delete Tag Group](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/delete_tag_group)
 
 ```JavaScript
 const Tags.deleteTagGroup(id)
@@ -277,7 +406,7 @@ const Tags.deleteTagGroup(id)
 
 
 
-#### [Delete Tag Relationships](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/delete_tag_relationships)
+#### [Delete Tag Relationships](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/delete_tag_relationships)
 
 ```JavaScript
 const Tags.deleteTagRelationships(body, id, relatedResource)
@@ -286,7 +415,7 @@ const Tags.deleteTagRelationships(body, id, relatedResource)
 
 
 
-#### [Get Tag](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_tag)
+#### [Get Tag](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_tag)
 
 ```JavaScript
 const Tags.getTag(id, opts)
@@ -295,7 +424,7 @@ const Tags.getTag(id, opts)
 
 
 
-#### [Get Tag Group](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_tag_group)
+#### [Get Tag Group](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_tag_group)
 
 ```JavaScript
 const Tags.getTagGroup(id, opts)
@@ -304,7 +433,7 @@ const Tags.getTagGroup(id, opts)
 
 
 
-#### [Get Tag Group Relationships](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_tag_group_relationships)
+#### [Get Tag Group Relationships](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_tag_group_relationships)
 
 ```JavaScript
 const Tags.getTagGroupRelationships(id, relatedResource)
@@ -313,7 +442,7 @@ const Tags.getTagGroupRelationships(id, relatedResource)
 
 
 
-#### [Get Tag Groups](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_tag_groups)
+#### [Get Tag Groups](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_tag_groups)
 
 ```JavaScript
 const Tags.getTagGroups(opts)
@@ -322,7 +451,7 @@ const Tags.getTagGroups(opts)
 
 
 
-#### [Get Tag Relationships](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_tag_relationships)
+#### [Get Tag Relationships](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_tag_relationships)
 
 ```JavaScript
 const Tags.getTagRelationships(id, relatedResource)
@@ -331,7 +460,7 @@ const Tags.getTagRelationships(id, relatedResource)
 
 
 
-#### [Get Tags](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/get_tags)
+#### [Get Tags](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/get_tags)
 
 ```JavaScript
 const Tags.getTags(opts)
@@ -340,7 +469,7 @@ const Tags.getTags(opts)
 
 
 
-#### [Update Tag](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/update_tag)
+#### [Update Tag](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/update_tag)
 
 ```JavaScript
 const Tags.updateTag(body, id)
@@ -349,7 +478,7 @@ const Tags.updateTag(body, id)
 
 
 
-#### [Update Tag Group](https://developers.klaviyo.com/en/v2022-11-14.pre/reference/update_tag_group)
+#### [Update Tag Group](https://developers.klaviyo.com/en/v2022-12-15.pre/reference/update_tag_group)
 
 ```JavaScript
 const Tags.updateTagGroup(body, id)

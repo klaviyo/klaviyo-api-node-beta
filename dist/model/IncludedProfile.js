@@ -5,15 +5,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.IncludedProfile = void 0;
 var _ApiClient = require("../ApiClient.js");
-var _IncludedProfilesAttributes = require("./IncludedProfilesAttributes.js");
-var _IncludedVariantsLinks = require("./IncludedVariantsLinks.js");
+var _IncludedProfileAttributes = require("./IncludedProfileAttributes.js");
+var _IncludedTagsLinks = require("./IncludedTagsLinks.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 /**
  * The IncludedProfile model module.
  * @module model/IncludedProfile
- * @version 2022-11-14.pre
+ * @version 2022-12-15.pre
  */
 var IncludedProfile = /*#__PURE__*/function () {
   /**
@@ -22,8 +25,8 @@ var IncludedProfile = /*#__PURE__*/function () {
    * @class
    * @param type {module:model/IncludedProfile.TypeEnum} 
    * @param id {String} 
-   * @param attributes {module:model/IncludedProfilesAttributes} 
-   * @param links {module:model/IncludedVariantsLinks} 
+   * @param attributes {module:model/IncludedProfileAttributes} 
+   * @param links {module:model/IncludedTagsLinks} 
    */
   function IncludedProfile(type, id, attributes, links) {
     _classCallCheck(this, IncludedProfile);
@@ -47,8 +50,8 @@ var IncludedProfile = /*#__PURE__*/function () {
         obj = obj || new IncludedProfile();
         if (data.hasOwnProperty('type')) obj.type = _ApiClient.ApiClient.convertToType(data['type'], 'String');
         if (data.hasOwnProperty('id')) obj.id = _ApiClient.ApiClient.convertToType(data['id'], 'String');
-        if (data.hasOwnProperty('attributes')) obj.attributes = _IncludedProfilesAttributes.IncludedProfilesAttributes.constructFromObject(data['attributes']);
-        if (data.hasOwnProperty('links')) obj.links = _IncludedVariantsLinks.IncludedVariantsLinks.constructFromObject(data['links']);
+        if (data.hasOwnProperty('attributes')) obj.attributes = _IncludedProfileAttributes.IncludedProfileAttributes.constructFromObject(data['attributes']);
+        if (data.hasOwnProperty('links')) obj.links = _IncludedTagsLinks.IncludedTagsLinks.constructFromObject(data['links']);
       }
       return obj;
     }
@@ -79,11 +82,11 @@ IncludedProfile.prototype.type = undefined;
 IncludedProfile.prototype.id = undefined;
 
 /**
- * @member {module:model/IncludedProfilesAttributes} attributes
+ * @member {module:model/IncludedProfileAttributes} attributes
  */
 IncludedProfile.prototype.attributes = undefined;
 
 /**
- * @member {module:model/IncludedVariantsLinks} links
+ * @member {module:model/IncludedTagsLinks} links
  */
 IncludedProfile.prototype.links = undefined;

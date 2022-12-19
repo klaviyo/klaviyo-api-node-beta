@@ -3,8 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Tags = exports.Segments = exports.Lists = exports.Flows = exports.DataPrivacy = exports.ConfigWrapper = void 0;
+exports.Tags = exports.Segments = exports.Lists = exports.Flows = exports.DataPrivacy = exports.ConfigWrapper = exports.Campaigns = void 0;
 var _exponentialBackoff = require("exponential-backoff");
+var _CampaignsApi = require("./api/CampaignsApi.js");
 var _DataPrivacyApi = require("./api/DataPrivacyApi.js");
 var _FlowsApi = require("./api/FlowsApi.js");
 var _ListsApi = require("./api/ListsApi.js");
@@ -73,6 +74,8 @@ var ConfigWrapper = function ConfigWrapper(authKey) {
   return defaultClient;
 };
 exports.ConfigWrapper = ConfigWrapper;
+var Campaigns = wrapObj(_CampaignsApi.CampaignsApi);
+exports.Campaigns = Campaigns;
 var DataPrivacy = wrapObj(_DataPrivacyApi.DataPrivacyApi);
 exports.DataPrivacy = DataPrivacy;
 var Flows = wrapObj(_FlowsApi.FlowsApi);
