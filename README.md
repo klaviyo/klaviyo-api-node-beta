@@ -74,28 +74,28 @@ ConfigWrapper("KLAVIYO PRIVATE KEY GOES HERE", {
 NOTE:
 * The SDK retries on resolvable errors, namely: rate limits (common) and server errors on klaviyo (rare).
 
-### To call the `getProfile` operation:
+### To call the `getCampaign` operation:
 
 ```JavaScript
-import {Profiles} from 'klaviyo-api-beta';
+import {Campaigns} from 'klaviyo-api-beta';
 
-const profileId = "PROFILE_ID";
+const campaignId = "CAMPAIGN_ID";
 const opts = {};
 
-Profiles.getProfile(profileId, opts)
+Campaigns.getCampaign(campaignId, opts)
     .then(data => 'Do Something Here')
     .catch(error => 'An error was thrown check the HTTP code with error.status');
 ```
 or if you want to use async await
 ```JavaScript
-import {Profiles} from 'klaviyo-api-beta';
+import {Campaigns} from 'klaviyo-api-beta';
 
-const profileId = "PROFILE_ID";
+const campaignId = "CAMPAIGN_ID";
 const opts = {};
 
 // Just make sure you are calling with the async tag ie. async () => {}
 try {
-    response = await Profiles.getProfile(profileId, opts)
+    response = await Campaigns.getCampaign(campaignId, opts)
     console.log(response);
 } catch (e) {
     console.log(error);
@@ -107,10 +107,10 @@ once again if you're not using ES6
 ```Javascript
 var KaviyoSdk = require('klaviyo-api-beta');
 
-var profileId = "PROFILE_ID";
+var campaignId = "CAMPAIGN_ID";
 var opts = {};
 
-KaviyoSdk.Profiles.getProfile(profileId, opts)
+KaviyoSdk.Campaigns.getCampaign(campaignId, opts)
     .then(data => 'Do Something Here')
     .catch(error => 'An error was thrown check the HTTP code with error.status');
 ```
@@ -128,6 +128,18 @@ const r = await catalogApi.createCatalogCategory(body)
 
 Different endpoint include specific optional parameters. Here is a few examples how to use these and what they look like
 
+more often than not the info that can go into the `opts` param are the optional headers.
+These are formatted in js a bit different from the docs, headers names have variables that make bad names like
+page[cursor] are transformed to `pageCursor`. (Remove the weird characters and append words with camelCase)
+
+```javascript
+const opts = {
+    pageCursor: "page_cursor", // page[cursor]
+    fieldsList: ["list", "of", "wanted", "attributes"] // fields[list]
+    include: ["resource_to_include"] // include
+}
+```
+
 #### Cursor based Pagination
 
 Obtain the cursor value from the call you want to get the next page for, then pass it under the `pageCursor` optional parameter
@@ -135,7 +147,7 @@ Obtain the cursor value from the call you want to get the next page for, then pa
 ```javascript
 const nextPageCursor = 'WzE2NDA5OTUyMDAsICIzYzRjeXdGTndadyIsIHRydWVd'
 
-await Events.getEvents({pageCursor: nextPageCursor})
+await Campaigns.getCampaigns({pageCursor: nextPageCursor})
 ```
 
 #### Filtering
@@ -145,9 +157,9 @@ Filter by passing the filter as a string as under the optional parameter `filter
 Read more about formatting your filter strings in our developer documentation
 
 ```javascript
-const filter = 'any(email,["henry.chan@klaviyo-demo.com","amanda.das@klaviyo-demo.com"])'
+const filter = 'equals(archived,false)'
 
-const response1 = await Profiles.getProfiles({filter}); // the same as {filter: filter}
+const response1 = await Campaigns.getCampaigns({filter}); // the same as {filter: filter}
 ```
 
 #### Sparse Fields
@@ -155,12 +167,12 @@ const response1 = await Profiles.getProfiles({filter}); // the same as {filter: 
 The SDK expands the optional sparse fields into their own option, where you can pass a list of the desired items to include
 
 ```javascript
-const fieldsProfile = ["email"]
-const fieldsList = ["name"]
+const fieldsCampaign = ["name"]
+const fieldsTag = ["name"]
 
-await Profiles.getProfile(PROFILE_ID, {
-    fieldsProfile,
-    fieldsList
+await Campaigns.getCampaign(CAMPAIGN_ID, {
+    fieldsCampaign,
+    fieldsTag
 });
 ```
 
@@ -169,9 +181,9 @@ await Profiles.getProfile(PROFILE_ID, {
 Includes you can pass a similar way, just add the values you want to include as a list
 
 ```javascript
-const include = ["lists","segments"]
+const include = ["tags"]
 
-await Profiles.getProfile(PROFILE_ID, {
+await Campaigns.getCampaign(CAMPAIGN_ID, {
     include,
 });
 ```
